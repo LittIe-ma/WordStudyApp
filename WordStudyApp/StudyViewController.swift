@@ -19,12 +19,18 @@ class StudyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+
         array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
 
         nameLabel.text = array.nameArr.first
 
         tapCount = 0
+    }
+
+    private func configureView() {
+        setStatusBarbackgroundColor(.systemTeal)
     }
 
     @IBAction func pressNextButton(_ sender: Any) {

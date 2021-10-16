@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F2271A4EEE00CE6BFD /* Study.storyboard */; };
+		300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F4271A4F0E00CE6BFD /* SetWord.storyboard */; };
+		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
 		30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */; };
 		30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA326A6D38C00577C77 /* Main.storyboard */; };
 		30C5ADA826A6D38C00577C77 /* WordStudyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */; };
 		30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA926A6D39800577C77 /* Assets.xcassets */; };
 		30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */; };
-		30C5ADB826A6D39900577C77 /* WordStudyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADB726A6D39900577C77 /* WordStudyAppTests.swift */; };
-		30C5ADC326A6D39900577C77 /* WordStudyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADC226A6D39900577C77 /* WordStudyAppUITests.swift */; };
 		30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD026A8162700577C77 /* SetWordViewController.swift */; };
 		30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD226A8166A00577C77 /* StudyViewController.swift */; };
 		30C5ADD726A8289E00577C77 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD626A8289E00577C77 /* Words.swift */; };
 		98C8C8038E53BF9AC33772F1 /* Pods_WordStudyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */; };
-		B75DD43312BA48E68EC97A61 /* Pods_WordStudyApp_WordStudyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4355C78642FA683DBB51CE5 /* Pods_WordStudyApp_WordStudyAppUITests.framework */; };
-		DB3E17914A0435EF36B5814E /* Pods_WordStudyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E866A6B3C9815A2053ED68D9 /* Pods_WordStudyAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +42,9 @@
 /* Begin PBXFileReference section */
 		295B568F81B9751DD7106B9E /* Pods-WordStudyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2BACA4B1FE1CCD1276969C35 /* Pods-WordStudyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyAppTests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyAppTests/Pods-WordStudyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		300696F2271A4EEE00CE6BFD /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
+		300696F4271A4F0E00CE6BFD /* SetWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetWord.storyboard; sourceTree = "<group>"; };
+		300696F6271A528D00CE6BFD /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		30C5AD9A26A6D38B00577C77 /* WordStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,11 +54,7 @@
 		30C5ADAC26A6D39800577C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C5ADAE26A6D39800577C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C5ADB326A6D39900577C77 /* WordStudyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordStudyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30C5ADB726A6D39900577C77 /* WordStudyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStudyAppTests.swift; sourceTree = "<group>"; };
-		30C5ADB926A6D39900577C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C5ADBE26A6D39900577C77 /* WordStudyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordStudyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		30C5ADC226A6D39900577C77 /* WordStudyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStudyAppUITests.swift; sourceTree = "<group>"; };
-		30C5ADC426A6D39900577C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C5ADD026A8162700577C77 /* SetWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetWordViewController.swift; sourceTree = "<group>"; };
 		30C5ADD226A8166A00577C77 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
 		30C5ADD626A8289E00577C77 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
@@ -64,8 +62,6 @@
 		92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEE54435604A5FC764A6289 /* Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B19ABD1932936A045D148AB8 /* Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C4355C78642FA683DBB51CE5 /* Pods_WordStudyApp_WordStudyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyApp_WordStudyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E866A6B3C9815A2053ED68D9 /* Pods_WordStudyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93AFF019F7843FF6D2D7BAE /* Pods-WordStudyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB3E17914A0435EF36B5814E /* Pods_WordStudyAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75DD43312BA48E68EC97A61 /* Pods_WordStudyApp_WordStudyAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */,
-				C4355C78642FA683DBB51CE5 /* Pods_WordStudyApp_WordStudyAppUITests.framework */,
-				E866A6B3C9815A2053ED68D9 /* Pods_WordStudyAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				30C5AD9C26A6D38B00577C77 /* WordStudyApp */,
-				30C5ADB626A6D39900577C77 /* WordStudyAppTests */,
-				30C5ADC126A6D39900577C77 /* WordStudyAppUITests */,
 				30C5AD9B26A6D38B00577C77 /* Products */,
 				6BDCBFCFF7AAC9BAE9C2AAA3 /* Pods */,
 				1FA5F279B07E4F7130DAD3A3 /* Frameworks */,
@@ -134,34 +124,19 @@
 			children = (
 				30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */,
 				30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */,
+				300696F4271A4F0E00CE6BFD /* SetWord.storyboard */,
 				30C5ADD026A8162700577C77 /* SetWordViewController.swift */,
+				300696F2271A4EEE00CE6BFD /* Study.storyboard */,
 				30C5ADD226A8166A00577C77 /* StudyViewController.swift */,
 				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
+				30C5ADD626A8289E00577C77 /* Words.swift */,
+				300696F6271A528D00CE6BFD /* StatusBar.swift */,
 				30C5ADA926A6D39800577C77 /* Assets.xcassets */,
 				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
 				30C5ADAE26A6D39800577C77 /* Info.plist */,
 				30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */,
-				30C5ADD626A8289E00577C77 /* Words.swift */,
 			);
 			path = WordStudyApp;
-			sourceTree = "<group>";
-		};
-		30C5ADB626A6D39900577C77 /* WordStudyAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				30C5ADB726A6D39900577C77 /* WordStudyAppTests.swift */,
-				30C5ADB926A6D39900577C77 /* Info.plist */,
-			);
-			path = WordStudyAppTests;
-			sourceTree = "<group>";
-		};
-		30C5ADC126A6D39900577C77 /* WordStudyAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				30C5ADC226A6D39900577C77 /* WordStudyAppUITests.swift */,
-				30C5ADC426A6D39900577C77 /* Info.plist */,
-			);
-			path = WordStudyAppUITests;
 			sourceTree = "<group>";
 		};
 		6BDCBFCFF7AAC9BAE9C2AAA3 /* Pods */ = {
@@ -285,9 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */,
 				30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */,
 				30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */,
 				30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */,
+				300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */,
 				30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */,
 				30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */,
 				30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */,
@@ -428,7 +406,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C5ADB826A6D39900577C77 /* WordStudyAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +413,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C5ADC326A6D39900577C77 /* WordStudyAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

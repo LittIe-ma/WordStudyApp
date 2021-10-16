@@ -16,6 +16,7 @@ class WordArray {
 
     private init() {}
 }
+
 class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet private weak var wordField: UITextField!
@@ -24,10 +25,13 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     private var alertController: UIAlertController!
     private var realm = try! Realm()
     private var array = WordArray.arr
+    var wordArray: Results<Words>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+        
         tableView.dataSource = self
         tableView.delegate = self
 
@@ -37,7 +41,9 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
-    var wordArray: Results<Words>!
+    private func configureView() {
+        setStatusBarbackgroundColor(.systemTeal)
+    }
 
     func alert(title: String, message: String) {
         alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
