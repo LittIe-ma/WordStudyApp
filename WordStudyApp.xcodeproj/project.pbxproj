@@ -10,6 +10,8 @@
 		300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F2271A4EEE00CE6BFD /* Study.storyboard */; };
 		300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F4271A4F0E00CE6BFD /* SetWord.storyboard */; };
 		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
+		309AC22E271C866C005B8D28 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309AC22D271C866C005B8D28 /* PopoverViewController.swift */; };
+		309AC230271C8680005B8D28 /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309AC22F271C8680005B8D28 /* Popover.storyboard */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
 		30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */; };
 		30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA326A6D38C00577C77 /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		300696F2271A4EEE00CE6BFD /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		300696F4271A4F0E00CE6BFD /* SetWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetWord.storyboard; sourceTree = "<group>"; };
 		300696F6271A528D00CE6BFD /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		309AC22D271C866C005B8D28 /* PopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		309AC22F271C8680005B8D28 /* Popover.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
 		30C5AD9A26A6D38B00577C77 /* WordStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
 				30C5ADAE26A6D39800577C77 /* Info.plist */,
 				30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */,
+				309AC22D271C866C005B8D28 /* PopoverViewController.swift */,
+				309AC22F271C8680005B8D28 /* Popover.storyboard */,
 			);
 			path = WordStudyApp;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 				30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */,
 				30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */,
 				30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */,
+				309AC230271C8680005B8D28 /* Popover.storyboard in Resources */,
 				300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309AC22E271C866C005B8D28 /* PopoverViewController.swift in Sources */,
 				300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */,
 				30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */,
 				30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */,
@@ -509,6 +517,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -563,6 +572,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -17,7 +17,7 @@ class WordArray {
     private init() {}
 }
 
-class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
@@ -124,5 +124,21 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.text = item.name
 
         return cell
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let popover = segue.destination.popoverPresentationController
+        if sender is UIButton {
+            popover?.sourceRect = (sender as! UIButton).bounds
+        }
+
+        segue.destination.popoverPresentationController?.permittedArrowDirections = .up
+        segue.destination.preferredContentSize = CGSize(width: 200, height: 100)
+
+        popover?.delegate = self
+    }
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }

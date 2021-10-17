@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class StudyViewController: UIViewController {
+class StudyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var meaningLabel: UILabel!
@@ -59,5 +59,21 @@ class StudyViewController: UIViewController {
         meaningIndex = tapCount
 
         meaningLabel.text = array.meaningArr[meaningIndex]
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let popover = segue.destination.popoverPresentationController
+        if sender is UIButton {
+            popover?.sourceRect = (sender as! UIButton).bounds
+        }
+
+        segue.destination.popoverPresentationController?.permittedArrowDirections = .up
+        segue.destination.preferredContentSize = CGSize(width: 200, height: 100)
+
+        popover?.delegate = self
+    }
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
 }
