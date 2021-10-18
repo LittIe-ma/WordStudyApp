@@ -122,6 +122,9 @@
                                     <color systemColor="tertiaryLabelColor"/>
                                 </hierarchicalColors>
                             </imageReference>
+                            <connections>
+                                <action selector="didTapFloat:" destination="344-L1-fDS" id="Biy-Rc-Rpc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

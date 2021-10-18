@@ -33,6 +33,10 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
         setStatusBarbackgroundColor(.systemTeal)
     }
 
+    @IBAction func didTapFloat(_ sender: Any) {
+        configureFloating()
+    }
+
     @IBAction func pressNextButton(_ sender: Any) {
         guard var nameIndex: Int = array.nameArr.indices.first else {
             return

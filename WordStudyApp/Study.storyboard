@@ -91,6 +91,9 @@
                                     <color systemColor="tertiaryLabelColor"/>
                                 </hierarchicalColors>
                             </imageReference>
+                            <connections>
+                                <action selector="didTapFloat:" destination="xkK-1L-ra6" id="gyB-5O-vey"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

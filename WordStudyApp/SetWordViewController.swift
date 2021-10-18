@@ -51,6 +51,10 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         present(alertController, animated: true, completion: nil)
     }
 
+    @IBAction func didTapFloat(_ sender: Any) {
+        configureFloating()
+    }
+
     @IBAction func addButton(_ sender: Any) {
         let words = Words()
         print(Realm.Configuration.defaultConfiguration.fileURL!)

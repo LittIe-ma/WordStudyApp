@@ -10,6 +10,7 @@
 		300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F2271A4EEE00CE6BFD /* Study.storyboard */; };
 		300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F4271A4F0E00CE6BFD /* SetWord.storyboard */; };
 		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
+		304454DD271D13A20064484D /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304454DC271D13A20064484D /* FloatingMenu.swift */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
 		30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */; };
 		30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA326A6D38C00577C77 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		300696F2271A4EEE00CE6BFD /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		300696F4271A4F0E00CE6BFD /* SetWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetWord.storyboard; sourceTree = "<group>"; };
 		300696F6271A528D00CE6BFD /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		304454DC271D13A20064484D /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
 		30C5AD9A26A6D38B00577C77 /* WordStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
 				30C5ADD626A8289E00577C77 /* Words.swift */,
 				300696F6271A528D00CE6BFD /* StatusBar.swift */,
+				304454DC271D13A20064484D /* FloatingMenu.swift */,
 				30C5ADA926A6D39800577C77 /* Assets.xcassets */,
 				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
 				30C5ADAE26A6D39800577C77 /* Info.plist */,
@@ -398,6 +401,7 @@
 				30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */,
 				30C5ADD726A8289E00577C77 /* Words.swift in Sources */,
 				30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */,
+				304454DD271D13A20064484D /* FloatingMenu.swift in Sources */,
 				30C5ADA826A6D38C00577C77 /* WordStudyApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
