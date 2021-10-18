@@ -91,11 +91,6 @@
                                     <color systemColor="tertiaryLabelColor"/>
                                 </hierarchicalColors>
                             </imageReference>
-                            <connections>
-                                <segue destination="0MI-Lf-z4R" kind="popoverPresentation" popoverAnchorBarButtonItem="64E-K5-3i6" id="gJg-UL-e5M">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -107,14 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UaF-qI-T3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4689.8550724637689" y="-422.54464285714283"/>
-        </scene>
-        <!--Popover-->
-        <scene sceneID="1Dn-3A-wof">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Popover" id="0MI-Lf-z4R" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8E0-3X-sqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5349" y="-423"/>
         </scene>
     </scenes>
     <resources>
