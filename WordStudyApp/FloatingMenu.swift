@@ -12,10 +12,13 @@ extension UIViewController {
 
     func configureFloating() {
         let privacyPolicy = UIAction(title: "プライバシーポリシー") { (action) in
-            print("privacyPolicy")
+            let url = URL(string: "https://yasudam84.github.io/WordStudyApp/")!
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
         }
         let aboutApp = UIAction(title: "このアプリについて") { (action) in
-            print("about this app")
+            
         }
 
         let menu = UIMenu(title: "", children: [privacyPolicy, aboutApp])
