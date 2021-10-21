@@ -31,7 +31,7 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
 
         configureView()
-        
+
         tableView.dataSource = self
         tableView.delegate = self
 

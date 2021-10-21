@@ -12,6 +12,8 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var meaningLabel: UILabel!
+    @IBOutlet private weak var nextButton: UIButton!
+    @IBOutlet private weak var meaningButton: UIButton!
     private var realm = try! Realm()
     private var array = WordArray.arr
     private var tapCount = 0
@@ -20,6 +22,10 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
         super.viewDidLoad()
 
         configureView()
+        nextButton.layer.borderWidth = 3.0
+        meaningButton.layer.borderWidth = 3.0
+        nextButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
+        meaningButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
 
         array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
