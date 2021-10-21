@@ -26,4 +26,5 @@ extension UIViewController {
         statusBarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         statusBarView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
     }
+
 }
