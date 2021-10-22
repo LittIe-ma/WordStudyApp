@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class StudyViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+class StudyViewController: UIViewController {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var meaningLabel: UILabel!
