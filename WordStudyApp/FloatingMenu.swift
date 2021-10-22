@@ -18,7 +18,7 @@ extension UIViewController {
             }
         }
         let aboutApp = UIAction(title: "このアプリについて") { (action) in
-            let dialog = UIAlertController(title: "シンプル単語カード", message: "隙間時間に学習できるシンプルな\n単語暗記アプリです", preferredStyle: .alert)
+            let dialog = UIAlertController(title: "シンプル単語カード", message: "隙間時間でも学習できるシンプルな\n単語暗記アプリです", preferredStyle: .alert)
             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(dialog, animated: true, completion: nil)
         }

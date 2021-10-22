@@ -17,7 +17,7 @@ class WordArray {
     private init() {}
 }
 
-class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
@@ -34,6 +34,8 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
         tableView.dataSource = self
         tableView.delegate = self
+        wordField.delegate = self
+        meaningField.delegate = self
 
         wordArray = realm.objects(Words.self)
 
@@ -43,6 +45,12 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
     private func configureView() {
         setStatusBarbackgroundColor(.systemTeal)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        wordField.resignFirstResponder()
+        meaningField.resignFirstResponder()
+        return true
     }
 
     func alert(title: String, message: String) {
