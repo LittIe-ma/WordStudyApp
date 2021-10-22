@@ -17,6 +17,7 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
     private var realm = try! Realm()
     private var array = WordArray.arr
     private var tapCount = 0
+    private var nameIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,22 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
         nextButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
         meaningButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
 
+        utilityDataSet()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        utilityDataSet()
+        nameIndex = tapCount
+    }
+
+    private func utilityDataSet() {
         array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
 
         nameLabel.text = array.nameArr.first
+        meaningLabel.text = ""
 
         tapCount = 0
     }
@@ -44,7 +57,8 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
     }
 
     @IBAction func pressNextButton(_ sender: Any) {
-        guard var nameIndex: Int = array.nameArr.indices.first else {
+
+        guard array.nameArr.isEmpty == false else {
             return
         }
 
@@ -55,7 +69,7 @@ class StudyViewController: UIViewController, UIPopoverPresentationControllerDele
             tapCount = 0
             nameLabel.text = array.nameArr.first
         }else {
-            nameLabel.text = array.nameArr[nameIndex]
+            nameLabel.text = array.nameArr[nameIndex!]
         }
 
         meaningLabel.text = ""
