@@ -11,6 +11,7 @@
 		300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F4271A4F0E00CE6BFD /* SetWord.storyboard */; };
 		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
 		304454DD271D13A20064484D /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304454DC271D13A20064484D /* FloatingMenu.swift */; };
+		309F834D2724019A001BCB3F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 309F834C2724019A001BCB3F /* Settings.bundle */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
 		30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */; };
 		30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA326A6D38C00577C77 /* Main.storyboard */; };
@@ -20,6 +21,8 @@
 		30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD026A8162700577C77 /* SetWordViewController.swift */; };
 		30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD226A8166A00577C77 /* StudyViewController.swift */; };
 		30C5ADD726A8289E00577C77 /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD626A8289E00577C77 /* Words.swift */; };
+		3BBB5EEF8674D4E7412854BD /* Pods_WordStudyApp_WordStudyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF4CB705E168B459A8D7D7 /* Pods_WordStudyApp_WordStudyAppUITests.framework */; };
+		4157CC006A242BB7E57BA2EE /* Pods_WordStudyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A3CB666F08B69676D4868D /* Pods_WordStudyAppTests.framework */; };
 		98C8C8038E53BF9AC33772F1 /* Pods_WordStudyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02A3CB666F08B69676D4868D /* Pods_WordStudyAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		295B568F81B9751DD7106B9E /* Pods-WordStudyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		2BACA4B1FE1CCD1276969C35 /* Pods-WordStudyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyAppTests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyAppTests/Pods-WordStudyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		300696F2271A4EEE00CE6BFD /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		300696F4271A4F0E00CE6BFD /* SetWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetWord.storyboard; sourceTree = "<group>"; };
 		300696F6271A528D00CE6BFD /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		304454DC271D13A20064484D /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
+		309F834C2724019A001BCB3F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		30C5AD9A26A6D38B00577C77 /* WordStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		30C5ADD626A8289E00577C77 /* Words.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		447767D05808233D5E3D7B8A /* Pods-WordStudyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyAppTests/Pods-WordStudyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97CF4CB705E168B459A8D7D7 /* Pods_WordStudyApp_WordStudyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordStudyApp_WordStudyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEE54435604A5FC764A6289 /* Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B19ABD1932936A045D148AB8 /* Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E93AFF019F7843FF6D2D7BAE /* Pods-WordStudyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4157CC006A242BB7E57BA2EE /* Pods_WordStudyAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BBB5EEF8674D4E7412854BD /* Pods_WordStudyApp_WordStudyAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */,
+				97CF4CB705E168B459A8D7D7 /* Pods_WordStudyApp_WordStudyAppUITests.framework */,
+				02A3CB666F08B69676D4868D /* Pods_WordStudyAppTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,6 +148,7 @@
 				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
 				30C5ADAE26A6D39800577C77 /* Info.plist */,
 				30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */,
+				309F834C2724019A001BCB3F /* Settings.bundle */,
 			);
 			path = WordStudyApp;
 			sourceTree = "<group>";
@@ -167,6 +178,7 @@
 				30C5AD9726A6D38B00577C77 /* Frameworks */,
 				30C5AD9826A6D38B00577C77 /* Resources */,
 				4991FDCEE57E35DF1D0953D3 /* [CP] Embed Pods Frameworks */,
+				309F834B272400BE001BCB3F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -267,6 +279,7 @@
 				30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */,
 				30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */,
 				30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */,
+				309F834D2724019A001BCB3F /* Settings.bundle in Resources */,
 				300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +322,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		309F834B272400BE001BCB3F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PROJECT_NAME/Settings.bundle\nfi\n";
 		};
 		4991FDCEE57E35DF1D0953D3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

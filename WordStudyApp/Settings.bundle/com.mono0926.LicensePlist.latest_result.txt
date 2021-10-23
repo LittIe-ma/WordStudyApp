@@ -1,0 +1,39 @@
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 3.14.4
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 3.14.4
+
+name: Realm, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 10.17.0
+
+name: Realm, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 10.17.0
+
+name: RealmSwift, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 10.17.0
+
+name: RealmSwift, nameSpecified: 
+body: TABLE OF CONTENTS
+
+1…
+version: 10.17.0
+
+add-version-numbers: false
+
+LicensePlist Version: 3.14.4

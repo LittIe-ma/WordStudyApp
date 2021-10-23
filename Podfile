@@ -7,6 +7,7 @@ target 'WordStudyApp' do
 
   # Pods for WordStudyApp
   pod 'RealmSwift'
+  pod 'LicensePlist'
   target 'WordStudyAppTests' do
     inherit! :search_paths
     # Pods for testing

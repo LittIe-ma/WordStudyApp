@@ -76,6 +76,7 @@
 - (void)setParent:(RLMObjectBase *)parentObject property:(RLMProperty *)property {
     _parentObject = parentObject;
     _key = property.name;
+    _isLegacyProperty = property.isLegacy;
 }
 
 static bool RLMValidateKeyType(RLMPropertyType keyType) {
@@ -424,6 +425,12 @@ static void changeDictionary(__unsafe_unretained RLMDictionary *const dictionary
     [super addObserver:observer forKeyPath:keyPath options:options context:context];
 }
 
+#pragma mark - Key Path Strings
+
+- (NSString *)propertyKey {
+    return _key;
+}
+
 #pragma mark - Methods unsupported on unmanaged RLMDictionary instances
 
 #pragma clang diagnostic push
@@ -456,6 +463,17 @@ static void changeDictionary(__unsafe_unretained RLMDictionary *const dictionary
 
 - (RLMNotificationToken *)addNotificationBlock:(void (^)(RLMDictionary *, RLMCollectionChange *, NSError *))block
                                          queue:(nullable dispatch_queue_t)queue {
+    @throw RLMException(@"This method may only be called on RLMDictionary instances retrieved from an RLMRealm");
+}
+
+- (RLMNotificationToken *)addNotificationBlock:(void (^)(RLMDictionary *, RLMCollectionChange *, NSError *))block
+                                      keyPaths:(nullable NSArray<NSString *> *)keyPaths
+                                         queue:(nullable dispatch_queue_t)queue {
+    @throw RLMException(@"This method may only be called on RLMDictionary instances retrieved from an RLMRealm");
+}
+
+- (RLMNotificationToken *)addNotificationBlock:(void (^)(RLMDictionary *, RLMCollectionChange *, NSError *))block
+                                      keyPaths:(nullable NSArray<NSString *> *)keyPaths {
     @throw RLMException(@"This method may only be called on RLMDictionary instances retrieved from an RLMRealm");
 }
 
