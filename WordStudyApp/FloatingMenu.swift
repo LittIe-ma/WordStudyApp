@@ -22,8 +22,13 @@ extension UIViewController {
             dialog.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(dialog, animated: true, completion: nil)
         }
+        let openSettings = UIAction(title: "ライセンス") { (action) in
+            if let url = URL(string: UIApplication.openSettingsURLString), UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
 
-        let menu = UIMenu(title: "", children: [privacyPolicy, aboutApp])
+        let menu = UIMenu(title: "", children: [privacyPolicy, openSettings, aboutApp])
         let menuBarItem = UIBarButtonItem(image: UIImage(systemName: "ellipsis")?.withTintColor(.white, renderingMode: .alwaysOriginal), menu: menu)
         navigationItem.rightBarButtonItem = menuBarItem
     }
