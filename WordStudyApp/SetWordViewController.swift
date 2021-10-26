@@ -43,6 +43,13 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
+        array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+    }
+
     private func configureView() {
         setStatusBarbackgroundColor(.systemTeal)
     }
@@ -83,10 +90,10 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
             realm.add(words)
         }
 
+        array.nameArr += [wordField.text!]
+        array.meaningArr += [meaningField.text!]
         wordField.text = ""
         meaningField.text = ""
-        array.nameArr = [wordField.text!]
-        array.meaningArr = [meaningField.text!]
 
         tableView.reloadData()
     }
