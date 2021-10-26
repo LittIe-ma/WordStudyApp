@@ -12,11 +12,11 @@
 		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
 		304454DD271D13A20064484D /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304454DC271D13A20064484D /* FloatingMenu.swift */; };
 		309F834D2724019A001BCB3F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 309F834C2724019A001BCB3F /* Settings.bundle */; };
+		309F83952727EAD2001BCB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA926A6D39800577C77 /* Assets.xcassets */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
 		30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */; };
 		30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA326A6D38C00577C77 /* Main.storyboard */; };
 		30C5ADA826A6D38C00577C77 /* WordStudyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */; };
-		30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA926A6D39800577C77 /* Assets.xcassets */; };
 		30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */; };
 		30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD026A8162700577C77 /* SetWordViewController.swift */; };
 		30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5ADD226A8166A00577C77 /* StudyViewController.swift */; };
@@ -277,9 +277,9 @@
 			files = (
 				300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */,
 				30C5ADAD26A6D39800577C77 /* LaunchScreen.storyboard in Resources */,
-				30C5ADAA26A6D39800577C77 /* Assets.xcassets in Resources */,
 				30C5ADA526A6D38C00577C77 /* Main.storyboard in Resources */,
 				309F834D2724019A001BCB3F /* Settings.bundle in Resources */,
+				309F83952727EAD2001BCB3F /* Assets.xcassets in Resources */,
 				300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
