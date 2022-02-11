@@ -12,7 +12,7 @@ extension UIViewController {
 
     func configureFloating() {
         let privacyPolicy = UIAction(title: "プライバシーポリシー") { (action) in
-            let url = URL(string: "https://yasudam84.github.io/WordStudyApp/")!
+            guard let url = URL(string: "https://littie-ma.github.io/WordStudyApp/") else { return }
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url)
             }
