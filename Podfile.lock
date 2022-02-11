@@ -1,10 +1,10 @@
 PODS:
-  - LicensePlist (3.14.4)
-  - Realm (10.17.0):
-    - Realm/Headers (= 10.17.0)
-  - Realm/Headers (10.17.0)
-  - RealmSwift (10.17.0):
-    - Realm (= 10.17.0)
+  - LicensePlist (3.17.0)
+  - Realm (10.22.0):
+    - Realm/Headers (= 10.22.0)
+  - Realm/Headers (10.22.0)
+  - RealmSwift (10.22.0):
+    - Realm (= 10.22.0)
 
 DEPENDENCIES:
   - LicensePlist
@@ -17,10 +17,10 @@ SPEC REPOS:
     - RealmSwift
 
 SPEC CHECKSUMS:
-  LicensePlist: 7cf61d222446422aacd4e3526989e8394dd4bea0
-  Realm: 9533276bd76f66aa2fd0d3ffe700c1f6023dcab6
-  RealmSwift: 57f5d59aa29852587aad1e861989e7af139894b5
+  LicensePlist: f7eaf6d1d39746d49415ab30f104b734d5163519
+  Realm: d9e4e5877095a6722145811f56fe89a531c9659d
+  RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
 
 PODFILE CHECKSUM: b7e93fff71e74426b2b730ef5a0684f37a4fbeff
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2
