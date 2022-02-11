@@ -71,7 +71,6 @@
 		ADEE54435604A5FC764A6289 /* Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B19ABD1932936A045D148AB8 /* Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E93AFF019F7843FF6D2D7BAE /* Pods-WordStudyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.release.xcconfig"; sourceTree = "<group>"; };
-		F3EDD01827B6A2A7007BDAE3 /* Japanese.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Japanese.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				30C5AD9C26A6D38B00577C77 /* WordStudyApp */,
-				F3EDD01627B6A160007BDAE3 /* docs */,
 				30C5AD9B26A6D38B00577C77 /* Products */,
 				6BDCBFCFF7AAC9BAE9C2AAA3 /* Pods */,
 				1FA5F279B07E4F7130DAD3A3 /* Frameworks */,
@@ -166,22 +164,6 @@
 				2BACA4B1FE1CCD1276969C35 /* Pods-WordStudyAppTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		F3EDD01627B6A160007BDAE3 /* docs */ = {
-			isa = PBXGroup;
-			children = (
-				F3EDD01727B6A18D007BDAE3 /* PrivacyPolicy */,
-			);
-			path = docs;
-			sourceTree = "<group>";
-		};
-		F3EDD01727B6A18D007BDAE3 /* PrivacyPolicy */ = {
-			isa = PBXGroup;
-			children = (
-				F3EDD01827B6A2A7007BDAE3 /* Japanese.h */,
-			);
-			path = PrivacyPolicy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -7,15 +7,4 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
-   <Group
-      location = "group:docs"
-      name = "docs">
-      <Group
-         location = "group:docs/PrivacyPolicy"
-         name = "PrivacyPolicy">
-         <FileRef
-            location = "group:docs/PrivacyPolicy/Japanese.h">
-         </FileRef>
-      </Group>
-   </Group>
 </Workspace>
