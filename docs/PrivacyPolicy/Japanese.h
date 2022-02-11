@@ -1,13 +1,3 @@
-//
-//  Japanese.h
-//  WordStudyApp
-//
-//  Created by Masato Yasuda on 2022/02/11.
-//
-
-#ifndef Japanese_h
-#define Japanese_h
-
 <h2>プライバシーポリシー</h2>
 <hr>
 <p>このアプリはあなたに関する情報を収集しません。</p><br>
@@ -16,5 +6,3 @@
   したがって、このアプリをアップデートするときにこのページを確認することをお勧めします。<br>
   これらの変更は、このページに投稿された直後に有効になります。</p><br>
 <p>※ご不明な点がありましたら、お気軽にお問い合わせください。</p>
-
-#endif /* Japanese_h */
