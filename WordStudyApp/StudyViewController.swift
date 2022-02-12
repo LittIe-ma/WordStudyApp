@@ -23,11 +23,6 @@ class StudyViewController: UIViewController {
         super.viewDidLoad()
 
         setStatusBarbackgroundColor(.systemTeal)
-        nextButton.layer.borderWidth = 3.0
-        meaningButton.layer.borderWidth = 3.0
-        nextButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
-        meaningButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
-
         utilityDataSet()
     }
 
