@@ -33,21 +33,16 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setStatusBarbackgroundColor(.systemTeal)
-
         wordField.delegate = self
         meaningField.delegate = self
-
         wordArray = realm.objects(Words.self)
-
         array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
@@ -72,24 +67,16 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         let words = Words()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
 
-        guard wordField.text != "" else {
-            alert(title: "単語を入力してください", message: "")
-            return
-        }
-        guard meaningField.text != "" else {
-            alert(title: "意味を入力してください", message: "")
-            return
-        }
+        guard let wordText = wordField.text, !wordText.isEmpty else { return }
+        guard let meaningText = meaningField.text, !meaningText.isEmpty else { return }
 
-        words.text = wordField.text!
-        words.meaning = meaningField.text!
+        words.text = wordText
+        words.meaning = meaningText
 
-        try! realm.write {
-            realm.add(words)
-        }
+        RealmClient.shared.add(words)
 
-        array.nameArr += [wordField.text!]
-        array.meaningArr += [meaningField.text!]
+        array.nameArr += [wordText]
+        array.meaningArr += [meaningText]
         wordField.text = ""
         meaningField.text = ""
 
@@ -97,22 +84,16 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     @IBAction func deleteAllButton(_ sender: Any) {
-
         let actionSheet = UIAlertController(title: "項目を全て削除", message: "本当によろしいですか？", preferredStyle: .actionSheet)
-
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: { [self] (action: UIAlertAction!) -> Void in
             RealmClient.shared.deleteAll()
             array.nameArr.removeAll()
             array.meaningArr.removeAll()
-
             tableView.reloadData()
         })
-
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
-
         actionSheet.addAction(defaultAction)
         actionSheet.addAction(cancelAction)
-
         present(actionSheet, animated: true, completion: nil)
     }
 
@@ -131,12 +112,8 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
-        let item: Words = self.wordArray[indexPath.row]
-
+        let item: Words = wordArray[indexPath.row]
         cell.textLabel?.text = item.text
-
         return cell
     }
-
 }
