@@ -18,22 +18,20 @@ final class SetWordViewController: UIViewController {
         }
     }
     private var alertController: UIAlertController!
-    private var realm = try! Realm()
     private var array = WordArray.array
     var wordArray: Results<Words>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         setStatusBarbackgroundColor(.systemTeal)
-        wordArray = realm.objects(Words.self)
-        array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
-        array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+        wordArray = RealmClient.shared.getObjects()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
-        array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+        array.nameArray = RealmClient.shared.getTextObjects()
+        array.meaningArray = RealmClient.shared.getMeaningObjects()
     }
 
     func alert(title: String, message: String) {
@@ -48,8 +46,6 @@ final class SetWordViewController: UIViewController {
 
     @IBAction func addButton(_ sender: Any) {
         let words = Words()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
-
         guard let wordText = wordField.text, !wordText.isEmpty else { return }
         guard let meaningText = meaningField.text, !meaningText.isEmpty else { return }
 

@@ -17,6 +17,18 @@ final class RealmClient {
         realm.objects(Words.self).count
     }
 
+    func getObjects() -> Results<Words> {
+        realm.objects(Words.self)
+    }
+
+    func getTextObjects() -> [String] {
+        realm.objects(Words.self).value(forKey: "text") as! [String]
+    }
+
+    func getMeaningObjects() -> [String] {
+        realm.objects(Words.self).value(forKey: "meaning") as! [String]
+    }
+
     func add(_ Words: Words) {
         try! realm.write { realm.add(Words) }
     }

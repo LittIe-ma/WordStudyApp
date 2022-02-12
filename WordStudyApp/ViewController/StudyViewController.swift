@@ -14,7 +14,6 @@ final class StudyViewController: UIViewController {
     @IBOutlet private weak var meaningLabel: UILabel!
     @IBOutlet private weak var nextButton: UIButton!
     @IBOutlet private weak var meaningButton: UIButton!
-    private var realm = try! Realm()
     private var array = WordArray.array
     private var tapCount = 0
     private var textIndex: Int?
@@ -31,8 +30,8 @@ final class StudyViewController: UIViewController {
     }
 
     private func utilityDataSet() {
-        array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
-        array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+        array.nameArray = RealmClient.shared.getTextObjects()
+        array.meaningArray = RealmClient.shared.getMeaningObjects()
         nameLabel.text = array.nameArray.first
         meaningLabel.text = ""
         tapCount = 0
