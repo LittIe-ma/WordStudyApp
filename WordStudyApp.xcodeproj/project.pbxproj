@@ -167,9 +167,7 @@
 		F3EDD01E27B76DA5007BDAE3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				300696F4271A4F0E00CE6BFD /* SetWord.storyboard */,
 				30C5ADD026A8162700577C77 /* SetWordViewController.swift */,
-				300696F2271A4EEE00CE6BFD /* Study.storyboard */,
 				30C5ADD226A8166A00577C77 /* StudyViewController.swift */,
 			);
 			path = ViewController;
@@ -205,6 +203,8 @@
 			children = (
 				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
 				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
+				300696F4271A4F0E00CE6BFD /* SetWord.storyboard */,
+				300696F2271A4EEE00CE6BFD /* Study.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
