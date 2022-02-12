@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		300696F3271A4EEE00CE6BFD /* Study.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F2271A4EEE00CE6BFD /* Study.storyboard */; };
 		300696F5271A4F0E00CE6BFD /* SetWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300696F4271A4F0E00CE6BFD /* SetWord.storyboard */; };
-		300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* StatusBar.swift */; };
-		304454DD271D13A20064484D /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304454DC271D13A20064484D /* FloatingMenu.swift */; };
+		300696F7271A528D00CE6BFD /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300696F6271A528D00CE6BFD /* UIViewController+.swift */; };
 		309F834D2724019A001BCB3F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 309F834C2724019A001BCB3F /* Settings.bundle */; };
 		309F83952727EAD2001BCB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C5ADA926A6D39800577C77 /* Assets.xcassets */; };
 		30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */; };
@@ -51,8 +50,7 @@
 		2BACA4B1FE1CCD1276969C35 /* Pods-WordStudyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyAppTests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyAppTests/Pods-WordStudyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		300696F2271A4EEE00CE6BFD /* Study.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Study.storyboard; sourceTree = "<group>"; };
 		300696F4271A4F0E00CE6BFD /* SetWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetWord.storyboard; sourceTree = "<group>"; };
-		300696F6271A528D00CE6BFD /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
-		304454DC271D13A20064484D /* FloatingMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
+		300696F6271A528D00CE6BFD /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		309F834C2724019A001BCB3F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		30C5AD9A26A6D38B00577C77 /* WordStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -138,20 +136,14 @@
 		30C5AD9C26A6D38B00577C77 /* WordStudyApp */ = {
 			isa = PBXGroup;
 			children = (
+				F3EDD02227B76E2C007BDAE3 /* Storyboard */,
+				F3EDD02127B76DD9007BDAE3 /* Extension */,
+				F3EDD02027B76DB4007BDAE3 /* Utility */,
+				F3EDD01F27B76DAD007BDAE3 /* Model */,
+				F3EDD01E27B76DA5007BDAE3 /* ViewController */,
 				30C5AD9D26A6D38B00577C77 /* AppDelegate.swift */,
 				30C5AD9F26A6D38B00577C77 /* SceneDelegate.swift */,
-				300696F4271A4F0E00CE6BFD /* SetWord.storyboard */,
-				30C5ADD026A8162700577C77 /* SetWordViewController.swift */,
-				300696F2271A4EEE00CE6BFD /* Study.storyboard */,
-				30C5ADD226A8166A00577C77 /* StudyViewController.swift */,
-				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
-				30C5ADD626A8289E00577C77 /* Words.swift */,
-				F3EDD01927B75A0A007BDAE3 /* RealmClient.swift */,
-				300696F6271A528D00CE6BFD /* StatusBar.swift */,
-				304454DC271D13A20064484D /* FloatingMenu.swift */,
-				F3EDD01C27B76631007BDAE3 /* UIView+.swift */,
 				30C5ADA926A6D39800577C77 /* Assets.xcassets */,
-				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
 				30C5ADAE26A6D39800577C77 /* Info.plist */,
 				30C5ADA626A6D38C00577C77 /* WordStudyApp.xcdatamodeld */,
 				309F834C2724019A001BCB3F /* Settings.bundle */,
@@ -170,6 +162,51 @@
 				2BACA4B1FE1CCD1276969C35 /* Pods-WordStudyAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F3EDD01E27B76DA5007BDAE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				300696F4271A4F0E00CE6BFD /* SetWord.storyboard */,
+				30C5ADD026A8162700577C77 /* SetWordViewController.swift */,
+				300696F2271A4EEE00CE6BFD /* Study.storyboard */,
+				30C5ADD226A8166A00577C77 /* StudyViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F3EDD01F27B76DAD007BDAE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30C5ADD626A8289E00577C77 /* Words.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F3EDD02027B76DB4007BDAE3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F3EDD01927B75A0A007BDAE3 /* RealmClient.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F3EDD02127B76DD9007BDAE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F3EDD01C27B76631007BDAE3 /* UIView+.swift */,
+				300696F6271A528D00CE6BFD /* UIViewController+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F3EDD02227B76E2C007BDAE3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
+				30C5ADAB26A6D39800577C77 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,14 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				300696F7271A528D00CE6BFD /* StatusBar.swift in Sources */,
+				300696F7271A528D00CE6BFD /* UIViewController+.swift in Sources */,
 				30C5ADD326A8166A00577C77 /* StudyViewController.swift in Sources */,
 				30C5AD9E26A6D38B00577C77 /* AppDelegate.swift in Sources */,
 				30C5ADD126A8162700577C77 /* SetWordViewController.swift in Sources */,
 				30C5ADD726A8289E00577C77 /* Words.swift in Sources */,
 				F3EDD01D27B76631007BDAE3 /* UIView+.swift in Sources */,
 				30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */,
-				304454DD271D13A20064484D /* FloatingMenu.swift in Sources */,
 				30C5ADA826A6D38C00577C77 /* WordStudyApp.xcdatamodeld in Sources */,
 				F3EDD01A27B75A0A007BDAE3 /* RealmClient.swift in Sources */,
 			);
