@@ -21,7 +21,11 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        }
+    }
     private var alertController: UIAlertController!
     private var realm = try! Realm()
     private var array = WordArray.arr
@@ -30,28 +34,22 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
+        setStatusBarbackgroundColor(.systemTeal)
 
-        tableView.dataSource = self
-        tableView.delegate = self
         wordField.delegate = self
         meaningField.delegate = self
 
         wordArray = realm.objects(Words.self)
 
-        array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
+        array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
+        array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
-    }
-
-    private func configureView() {
-        setStatusBarbackgroundColor(.systemTeal)
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -83,7 +81,7 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
             return
         }
 
-        words.name = wordField.text!
+        words.text = wordField.text!
         words.meaning = meaningField.text!
 
         try! realm.write {
@@ -103,9 +101,7 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         let actionSheet = UIAlertController(title: "項目を全て削除", message: "本当によろしいですか？", preferredStyle: .actionSheet)
 
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: { [self] (action: UIAlertAction!) -> Void in
-            try! realm.write {
-                realm.deleteAll()
-            }
+            RealmClient.shared.deleteAll()
             array.nameArr.removeAll()
             array.meaningArr.removeAll()
 
@@ -122,9 +118,7 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            try! realm.write {
-                realm.delete(self.wordArray[indexPath.row])
-            }
+            RealmClient.shared.delete(wordArray[indexPath.row])
             array.nameArr.remove(at: indexPath.row)
             array.meaningArr.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
@@ -132,15 +126,15 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        realm.objects(Words.self).count
+        RealmClient.shared.numberOfItems()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WordCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         let item: Words = self.wordArray[indexPath.row]
 
-        cell.textLabel?.text = item.name
+        cell.textLabel?.text = item.text
 
         return cell
     }

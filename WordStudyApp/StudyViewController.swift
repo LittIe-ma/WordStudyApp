@@ -17,12 +17,12 @@ class StudyViewController: UIViewController {
     private var realm = try! Realm()
     private var array = WordArray.arr
     private var tapCount = 0
-    private var nameIndex: Int?
+    private var textIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureView()
+        setStatusBarbackgroundColor(.systemTeal)
         nextButton.layer.borderWidth = 3.0
         meaningButton.layer.borderWidth = 3.0
         nextButton.layer.borderColor = UIColor {_ in return #colorLiteral(red: 0.9489346147, green: 0.9319375753, blue: 0.702398777, alpha: 1)}.cgColor
@@ -35,21 +35,17 @@ class StudyViewController: UIViewController {
         super.viewWillAppear(animated)
 
         utilityDataSet()
-        nameIndex = tapCount
+        textIndex = tapCount
     }
 
     private func utilityDataSet() {
-        array.nameArr = realm.objects(Words.self).value(forKey: "name") as! [String]
+        array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
 
         nameLabel.text = array.nameArr.first
         meaningLabel.text = ""
 
         tapCount = 0
-    }
-
-    private func configureView() {
-        setStatusBarbackgroundColor(.systemTeal)
     }
 
     @IBAction func didTapFloat(_ sender: Any) {
@@ -63,13 +59,13 @@ class StudyViewController: UIViewController {
         }
 
         tapCount += 1
-        nameIndex = tapCount
+        textIndex = tapCount
 
-        if nameIndex == array.nameArr.count {
+        if textIndex == array.nameArr.count {
             tapCount = 0
             nameLabel.text = array.nameArr.first
         }else {
-            nameLabel.text = array.nameArr[nameIndex!]
+            nameLabel.text = array.nameArr[textIndex!]
         }
 
         meaningLabel.text = ""

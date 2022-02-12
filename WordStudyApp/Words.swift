@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class Words: Object {
-    @objc dynamic var name = ""
+    @objc dynamic var text = ""
     @objc dynamic var meaning = ""
 }
 

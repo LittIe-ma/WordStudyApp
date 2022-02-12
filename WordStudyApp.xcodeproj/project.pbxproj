@@ -24,6 +24,7 @@
 		3BBB5EEF8674D4E7412854BD /* Pods_WordStudyApp_WordStudyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CF4CB705E168B459A8D7D7 /* Pods_WordStudyApp_WordStudyAppUITests.framework */; };
 		4157CC006A242BB7E57BA2EE /* Pods_WordStudyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02A3CB666F08B69676D4868D /* Pods_WordStudyAppTests.framework */; };
 		98C8C8038E53BF9AC33772F1 /* Pods_WordStudyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B589A98335CF4C157B7082 /* Pods_WordStudyApp.framework */; };
+		F3EDD01A27B75A0A007BDAE3 /* RealmClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EDD01927B75A0A007BDAE3 /* RealmClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		ADEE54435604A5FC764A6289 /* Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B19ABD1932936A045D148AB8 /* Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp-WordStudyAppUITests/Pods-WordStudyApp-WordStudyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E93AFF019F7843FF6D2D7BAE /* Pods-WordStudyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordStudyApp.release.xcconfig"; path = "Target Support Files/Pods-WordStudyApp/Pods-WordStudyApp.release.xcconfig"; sourceTree = "<group>"; };
+		F3EDD01927B75A0A007BDAE3 /* RealmClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				30C5ADD226A8166A00577C77 /* StudyViewController.swift */,
 				30C5ADA326A6D38C00577C77 /* Main.storyboard */,
 				30C5ADD626A8289E00577C77 /* Words.swift */,
+				F3EDD01927B75A0A007BDAE3 /* RealmClient.swift */,
 				300696F6271A528D00CE6BFD /* StatusBar.swift */,
 				304454DC271D13A20064484D /* FloatingMenu.swift */,
 				30C5ADA926A6D39800577C77 /* Assets.xcassets */,
@@ -433,6 +436,7 @@
 				30C5ADA026A6D38B00577C77 /* SceneDelegate.swift in Sources */,
 				304454DD271D13A20064484D /* FloatingMenu.swift in Sources */,
 				30C5ADA826A6D38C00577C77 /* WordStudyApp.xcdatamodeld in Sources */,
+				F3EDD01A27B75A0A007BDAE3 /* RealmClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
