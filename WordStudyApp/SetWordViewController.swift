@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-final class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+final class SetWordViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
@@ -87,16 +87,9 @@ final class SetWordViewController: UIViewController, UITableViewDataSource, UITa
         actionSheet.addAction(cancelAction)
         present(actionSheet, animated: true, completion: nil)
     }
+}
 
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            RealmClient.shared.delete(wordArray[indexPath.row])
-            array.nameArray.remove(at: indexPath.row)
-            array.meaningArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        }
-    }
-
+extension SetWordViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         RealmClient.shared.numberOfItems()
     }
@@ -106,5 +99,14 @@ final class SetWordViewController: UIViewController, UITableViewDataSource, UITa
         let item: Words = wordArray[indexPath.row]
         cell.textLabel?.text = item.text
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            RealmClient.shared.delete(wordArray[indexPath.row])
+            array.nameArray.remove(at: indexPath.row)
+            array.meaningArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
