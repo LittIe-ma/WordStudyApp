@@ -16,7 +16,6 @@ final class StudyViewController: UIViewController {
     @IBOutlet private weak var meaningButton: UIButton!
     private var array = WordArray.array
     private var tapCount = 0
-    private var textIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,18 +24,13 @@ final class StudyViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        utilityDataSet()
-        textIndex = tapCount
-    }
-
-    private func utilityDataSet() {
         array.nameArray = RealmClient.shared.getTextObjects()
         array.meaningArray = RealmClient.shared.getMeaningObjects()
         nameLabel.text = array.nameArray.first
         meaningLabel.text = ""
         tapCount = 0
     }
-    
+
     @IBAction func didTapFloat(_ sender: Any) {
         configureFloating()
     }
@@ -44,12 +38,11 @@ final class StudyViewController: UIViewController {
     @IBAction func pressNextButton(_ sender: Any) {
         guard !array.nameArray.isEmpty else { return }
         tapCount += 1
-        textIndex = tapCount
-        if textIndex == array.nameArray.count {
+        if tapCount == array.nameArray.count {
             tapCount = 0
             nameLabel.text = array.nameArray.first
         } else {
-            nameLabel.text = array.nameArray[textIndex!]
+            nameLabel.text = array.nameArray[tapCount]
         }
         meaningLabel.text = ""
     }
