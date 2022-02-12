@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.9)
   - LicensePlist (3.17.0)
   - Realm (10.22.0):
     - Realm/Headers (= 10.22.0)
@@ -7,20 +8,23 @@ PODS:
     - Realm (= 10.22.0)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - LicensePlist
   - RealmSwift
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - LicensePlist
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 6e839c575c4aa1078d58a596e41244e77abe918f
   LicensePlist: f7eaf6d1d39746d49415ab30f104b734d5163519
   Realm: d9e4e5877095a6722145811f56fe89a531c9659d
   RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
 
-PODFILE CHECKSUM: b7e93fff71e74426b2b730ef5a0684f37a4fbeff
+PODFILE CHECKSUM: de8b1f949a4ba1ababd0418ab7676f8351c8ce72
 
 COCOAPODS: 1.11.2

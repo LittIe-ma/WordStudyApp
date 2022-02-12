@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-final class SetWordViewController: UIViewController, UITextFieldDelegate {
+final class SetWordViewController: UIViewController {
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
@@ -25,8 +25,6 @@ final class SetWordViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setStatusBarbackgroundColor(.systemTeal)
-        wordField.delegate = self
-        meaningField.delegate = self
         wordArray = realm.objects(Words.self)
         array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
@@ -36,12 +34,6 @@ final class SetWordViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
         array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        wordField.resignFirstResponder()
-        meaningField.resignFirstResponder()
-        return true
     }
 
     func alert(title: String, message: String) {
