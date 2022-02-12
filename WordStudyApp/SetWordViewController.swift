@@ -8,16 +8,7 @@
 import UIKit
 import RealmSwift
 
-class WordArray {
-    var nameArr = [String]()
-    var meaningArr = [String]()
-
-    static let arr = WordArray()
-
-    private init() {}
-}
-
-class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
+final class SetWordViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
 
     @IBOutlet private weak var wordField: UITextField!
     @IBOutlet private weak var meaningField: UITextField!
@@ -28,7 +19,7 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     private var alertController: UIAlertController!
     private var realm = try! Realm()
-    private var array = WordArray.arr
+    private var array = WordArray.array
     var wordArray: Results<Words>!
 
     override func viewDidLoad() {
@@ -37,14 +28,14 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         wordField.delegate = self
         meaningField.delegate = self
         wordArray = realm.objects(Words.self)
-        array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
-        array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+        array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
+        array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        array.nameArr = realm.objects(Words.self).value(forKey: "text") as! [String]
-        array.meaningArr = realm.objects(Words.self).value(forKey: "meaning") as! [String]
+        array.nameArray = realm.objects(Words.self).value(forKey: "text") as! [String]
+        array.meaningArray = realm.objects(Words.self).value(forKey: "meaning") as! [String]
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -75,8 +66,8 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
 
         RealmClient.shared.add(words)
 
-        array.nameArr += [wordText]
-        array.meaningArr += [meaningText]
+        array.nameArray += [wordText]
+        array.meaningArray += [meaningText]
         wordField.text = ""
         meaningField.text = ""
 
@@ -87,8 +78,8 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
         let actionSheet = UIAlertController(title: "項目を全て削除", message: "本当によろしいですか？", preferredStyle: .actionSheet)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: { [self] (action: UIAlertAction!) -> Void in
             RealmClient.shared.deleteAll()
-            array.nameArr.removeAll()
-            array.meaningArr.removeAll()
+            array.nameArray.removeAll()
+            array.meaningArray.removeAll()
             tableView.reloadData()
         })
         let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
@@ -100,8 +91,8 @@ class SetWordViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
             RealmClient.shared.delete(wordArray[indexPath.row])
-            array.nameArr.remove(at: indexPath.row)
-            array.meaningArr.remove(at: indexPath.row)
+            array.nameArray.remove(at: indexPath.row)
+            array.meaningArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
