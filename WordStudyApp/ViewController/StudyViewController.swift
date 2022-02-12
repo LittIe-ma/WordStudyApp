@@ -46,9 +46,15 @@ final class StudyViewController: UIViewController {
         meaningLabel.text = ""
     }
 
+    @IBAction func didTapBackButton(_ sender: UIButton) {
+        guard !array.nameArray.isEmpty, tapCount != 0 else { return }
+        tapCount -= 1
+        nameLabel.text = array.nameArray[tapCount]
+        meaningLabel.text = ""
+    }
+
     @IBAction func didTapMeaningButton(_ sender: UIButton) {
-        guard var meaningIndex: Int = array.meaningArray.indices.first else { return }
-        meaningIndex = tapCount
-        meaningLabel.text = array.meaningArray[meaningIndex]
+        guard !array.meaningArray.isEmpty else { return }
+        meaningLabel.text = array.meaningArray[tapCount]
     }
 }
