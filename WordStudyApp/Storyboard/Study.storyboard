@@ -83,7 +83,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="pressMeaningButton:" destination="xkK-1L-ra6" eventType="touchUpInside" id="TpS-1G-AUt"/>
+                                                            <action selector="didTapMeaningButton:" destination="xkK-1L-ra6" eventType="touchUpInside" id="cE0-id-uZg"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -118,7 +118,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="pressNextButton:" destination="xkK-1L-ra6" eventType="touchUpInside" id="10m-ru-KtZ"/>
+                                                            <action selector="didTapNextButton:" destination="xkK-1L-ra6" eventType="touchUpInside" id="oQ1-ZZ-PIh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

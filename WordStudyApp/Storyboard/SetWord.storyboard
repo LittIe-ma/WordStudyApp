@@ -63,7 +63,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="addButton:" destination="344-L1-fDS" eventType="touchUpInside" id="4Kl-He-enX"/>
+                                                            <action selector="didTapAddButton:" destination="344-L1-fDS" eventType="touchUpInside" id="Zic-Gb-6xj"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -92,7 +92,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="deleteAllButton:" destination="344-L1-fDS" eventType="touchUpInside" id="JDA-vR-JUH"/>
+                                                            <action selector="didTapDeleteAllButton:" destination="344-L1-fDS" eventType="touchUpInside" id="jmZ-nu-tZO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

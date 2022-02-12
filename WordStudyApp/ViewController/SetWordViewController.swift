@@ -40,11 +40,11 @@ final class SetWordViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    @IBAction func didTapFloat(_ sender: Any) {
+    @IBAction func didTapFloat(_ sender: UIButton) {
         configureFloating()
     }
 
-    @IBAction func addButton(_ sender: Any) {
+    @IBAction func didTapAddButton(_ sender: UIButton) {
         let words = Words()
         guard let wordText = wordField.text, !wordText.isEmpty else { return }
         guard let meaningText = meaningField.text, !meaningText.isEmpty else { return }
@@ -62,7 +62,7 @@ final class SetWordViewController: UIViewController {
         tableView.reloadData()
     }
 
-    @IBAction func deleteAllButton(_ sender: Any) {
+    @IBAction func didTapDeleteAllButton(_ sender: UIButton) {
         let actionSheet = UIAlertController(title: "項目を全て削除", message: "本当によろしいですか？", preferredStyle: .actionSheet)
         let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: .default, handler: { [self] (action: UIAlertAction!) -> Void in
             RealmClient.shared.deleteAll()

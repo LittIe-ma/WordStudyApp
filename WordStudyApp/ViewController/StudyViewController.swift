@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import RealmSwift
 
 final class StudyViewController: UIViewController {
 
@@ -31,11 +30,11 @@ final class StudyViewController: UIViewController {
         tapCount = 0
     }
 
-    @IBAction func didTapFloat(_ sender: Any) {
+    @IBAction func didTapFloat(_ sender: UIButton) {
         configureFloating()
     }
 
-    @IBAction func pressNextButton(_ sender: Any) {
+    @IBAction func didTapNextButton(_ sender: UIButton) {
         guard !array.nameArray.isEmpty else { return }
         tapCount += 1
         if tapCount == array.nameArray.count {
@@ -47,7 +46,7 @@ final class StudyViewController: UIViewController {
         meaningLabel.text = ""
     }
 
-    @IBAction func pressMeaningButton(_ sender: Any) {
+    @IBAction func didTapMeaningButton(_ sender: UIButton) {
         guard var meaningIndex: Int = array.meaningArray.indices.first else { return }
         meaningIndex = tapCount
         meaningLabel.text = array.meaningArray[meaningIndex]
